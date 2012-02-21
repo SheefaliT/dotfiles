@@ -4,12 +4,6 @@ set nocompatible
 " for backgrounded buffers
 set hidden
 
-" Use a light background – use a real editor at some point
-let g:solarized_termcolors=256
-set t_Co=256
-" set background=light
-colorscheme solarized
-
 " Case insensitive searches unless search contains capitals
 set ignorecase
 set smartcase
@@ -23,15 +17,6 @@ syntax on
 " Use correct indentation
 filetype plugin indent on
 
-if has("gui_running")
-  " Turn off the toolbar
-  set guioptions-=T
-  " Set font and size
-  set guifont=Inconsolata:h18
-  " Only highlight the cursor in MacVim; in the console it's just annoying
-  " until I can figure out how to do it right
-  set cursorline
-endif
 
 
 " GRB: highlighting search"
@@ -82,3 +67,20 @@ set winheight=999
 " Highlight unwanted whitespaces
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
+
+if has("gui_running")
+  " Turn off the toolbar
+  set guioptions-=T
+  " Set font and size
+  set guifont=Inconsolata:h18
+  " Only highlight the cursor in MacVim; in the console it's just annoying
+  " until I can figure out how to do it right
+  set cursorline
+endif
+
+" Use a light background – use a real editor at some point
+let g:solarized_termcolors=256
+set t_Co=256
+set background=light
+colorscheme solarized
+
