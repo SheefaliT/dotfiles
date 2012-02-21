@@ -1,0 +1,13 @@
+.DS_Store
+*.x
+sqlnet.log
+
+# rvm configuration stuff
+# if the following are supposed to go into source control
+# then add them explicitly using the -f option
+.rvmrc
+setup_load_paths.rb
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
