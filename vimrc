@@ -79,7 +79,6 @@ if has("gui_running")
 endif
 
 " Use a light background – use a real editor at some point
-let g:solarized_termcolors=256
 set t_Co=256
 set background=light
 colorscheme solarized
