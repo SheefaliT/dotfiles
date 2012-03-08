@@ -15,6 +15,7 @@
 [diff]
   mnemonicprefix = true
 [alias]
+  b = branch
   ru = remote update
   co = checkout
   st = status --short
