@@ -80,6 +80,7 @@ endif
 set t_Co=256
 set background=light
 colorscheme solarized
+
 set cursorline
 
 " Prevent Vim from clobbering the scrollback buffer. See
@@ -112,3 +113,7 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
+
+" Configure the command-t window height
+let g:CommandTMinHeight=5
+let g:CommandTMaxHeight=15
