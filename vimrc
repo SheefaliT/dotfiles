@@ -1,3 +1,5 @@
+call pathogen#runtime_append_all_bundles()
+
 set nocompatible
 
 " Allow backgrounding buffers without writing them, and remember marks/undo
@@ -35,6 +37,7 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set textwidth=80
+set numberwidth=5
 
 
 " Shortcut to rapidly toggle `set list`
@@ -48,8 +51,6 @@ command! W :w
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
-
-call pathogen#infect()
 
 " Highlight anything over 80 characters
 " highlight OverLength ctermbg=red ctermfg=white guibg=#592929
@@ -73,13 +74,41 @@ if has("gui_running")
   set guioptions-=T
   " Set font and size
   set guifont=Inconsolata:h18
-  " Only highlight the cursor in MacVim; in the console it's just annoying
-  " until I can figure out how to do it right
-  set cursorline
 endif
 
 " Use a light background – use a real editor at some point
 set t_Co=256
 set background=light
 colorscheme solarized
+set cursorline
 
+" Prevent Vim from clobbering the scrollback buffer. See
+" http://www.shallowsky.com/linux/noaltscreen.html
+set t_ti= t_te=
+
+set scrolloff=3
+
+set wildmode=longest,list
+set wildmenu
+
+" Move around splits with <c-hjkl>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MULTIPURPOSE TAB KEY
+" Indent if we're at the beginning of a line. Else, do completion.
+" https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
+" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
