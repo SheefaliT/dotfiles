@@ -7,10 +7,6 @@ autoload -U colors && colors
 autoload -Uz compinit
 compinit
 
-autoload -U zgitinit
-zgitinit
-
-
 alias ls='ls -G'
 
 alias l='ls'
@@ -41,40 +37,6 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sb
 
 # Apple developer toolkit
 export PATH=/Developer/usr/bin:$PATH
-
-
-# Originally from Gary Bernhardt's dotfiles
-function minutes_since_last_commit {
-  now=`date +%s`
-  last_commit="$(git log --pretty=format:'%at' -1 2>/dev/null)"
-  if [ $? -eq 0 ]; then
-    seconds_since_last_commit=$((now - last_commit))
-    minutes_since_last_commit=$((seconds_since_last_commit/60))
-    echo $minutes_since_last_commit
-  else
-    echo "-1"
-  fi
-}
-
-
-function time_since_last_git_commit_prompt {
-	if zgit_inworktree; then
-    local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
-    if [ "$MINUTES_SINCE_LAST_COMMIT" -eq -1 ]; then
-      echo "%{\e[0;37m%}uncommitted%{\e[0m%}"
-    else
-      if [ "$MINUTES_SINCE_LAST_COMMIT" -gt 60 ]; then
-        echo "%{\e[31m%}1h+%{\e[0m%}"
-      elif [ "$MINUTES_SINCE_LAST_COMMIT" -gt 30 ]; then
-        echo "%{\e[31m%}$(minutes_since_last_commit)m%{\e[0m%}"
-      elif [ "$MINUTES_SINCE_LAST_COMMIT" -gt 10 ]; then
-        echo "%{\e[33m%}$(minutes_since_last_commit)m%{\e[0m%}"
-      else
-        echo "%{\e[3;34m%}$(minutes_since_last_commit)m%{\e[0m%}"
-      fi
-    fi
-  fi
-}
 
 
 PROMPT=$'%{\e[1;30m%}%c ☛ %{\e[0m%}'
