@@ -19,6 +19,7 @@ alias ll='ls -lh'
 alias lla='ll -a'
 
 alias r='script/rails'
+alias sc='script/console'
 alias spec=rspec
 
 # Git aliases
