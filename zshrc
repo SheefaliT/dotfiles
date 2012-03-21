@@ -78,7 +78,7 @@ function time_since_last_git_commit_prompt {
 
 
 PROMPT=$'%{\e[1;30m%}%c ☛ %{\e[0m%}'
-RPROMPT=$'$(git_cwd_info) $(time_since_last_git_commit_prompt)'
+RPROMPT=$'$(git_cwd_info)'
 
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
