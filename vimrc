@@ -113,3 +113,14 @@ inoremap <s-tab> <c-n>
 " Configure the command-t window height
 let g:CommandTMinHeight=5
 let g:CommandTMaxHeight=15
+
+" Configure taglist
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+let Tlist_Use_Right_Window=1
+let Tlist_WinHeight=40
+let Tlist_Use_Horiz_Window=1
+let Tlist_Close_On_Select=1
+let Tlist_GainFocus_On_ToggleOpen=1
+
+nnoremap ,t :TlistToggle<cr>
+nnoremap ,r :TlistAddFilesRecursive .<cr>
