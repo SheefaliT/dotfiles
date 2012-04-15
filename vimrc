@@ -74,10 +74,6 @@ set winheight=5
 set winminheight=5
 set winheight=999
 
-" Highlight unwanted whitespaces
-:highlight ExtraWhitespace ctermbg=red guibg=red
-:match ExtraWhitespace /\s\+$/
-
 if has("gui_running")
   " Turn off the toolbar
   set guioptions-=T
@@ -89,6 +85,11 @@ endif
 set t_Co=256
 set background=light
 colorscheme solarized
+
+" Highlight unwanted whitespaces
+highlight TrailingWhitespace ctermbg=red guibg=red
+match TrailingWhitespace /\s\+$/
+
 
 set cursorline
 
