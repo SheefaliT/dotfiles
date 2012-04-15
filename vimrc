@@ -110,6 +110,16 @@ noremap k gk
 noremap gj j
 noremap gk k
 
+augroup lastline
+  au!
+
+  " Jump to last cursor position unless it's invalid or in an event handler
+  au BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+augroup END
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " Indent if we're at the beginning of a line. Else, do completion.
