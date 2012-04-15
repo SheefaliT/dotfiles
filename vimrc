@@ -39,6 +39,15 @@ set expandtab
 set textwidth=80
 set numberwidth=5
 
+set autoread
+set autowrite
+
+set laststatus=2
+
+" Note the trailing space.
+" set wrap
+set showbreak=↪\ 
+set linebreak
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
@@ -93,6 +102,12 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" Please handle wrapped lines by default.
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
