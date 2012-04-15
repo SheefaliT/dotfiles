@@ -33,7 +33,7 @@ export EMAIL='jasonmichaelroth@gmail.com'
 export TERM='xterm-color'
 
 # just reset the fucking path so I know what's on it
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH=$HOME/bin:$HOME/.dotfiles/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
 
 # Apple developer toolkit
 export PATH=/Developer/usr/bin:$PATH
