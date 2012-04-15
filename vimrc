@@ -95,7 +95,7 @@ set cursorline
 
 set scrolloff=3
 
-set wildmode=longest,list
+set wildmode=longest
 set wildmenu
 
 " Move around splits with <c-hjkl>
