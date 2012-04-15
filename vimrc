@@ -158,3 +158,22 @@ let Tlist_GainFocus_On_ToggleOpen=1
 
 nnoremap ,t :TlistToggle<cr>
 nnoremap ,r :TlistAddFilesRecursive .<cr>
+
+
+function! StripTrailingWhitespace()
+  " mark the cursors location
+  normal mz
+  " mark the top of the visible window
+  normal Hmy
+  " Strip the trailing whitespace
+  %s/\s\+$//g
+  " set the window back to where it was
+  normal 'yz<cr>
+  " set the cursor back to where it was
+  normal 'z
+  " delete marks
+  delmarks zy
+endfunction
+
+command! StripTrailingWhitespace :call StripTrailingWhitespace()
+
