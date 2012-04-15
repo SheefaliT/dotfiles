@@ -98,6 +98,8 @@ set scrolloff=3
 set wildmode=longest
 set wildmenu
 
+set statusline=%f%(\ [%M%R%H%W]%)%=line\ %l,%<\ col\ %v
+
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
