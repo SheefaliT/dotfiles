@@ -20,6 +20,7 @@
   co = checkout
   st = status --short
   l = "!source ~/.githelpers && git_pretty_log"
+  r = "!source ~/.githelpers && git_pretty_log -20"
   dc = diff --cached
   d = diff
   amend = commit --amend
