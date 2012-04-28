@@ -19,6 +19,7 @@ alias sc='script/console'
 alias spec=rspec
 
 # Git aliases
+alias g='git'
 alias st='git st'
 alias gl='git l'
 alias gla='git l --all'
