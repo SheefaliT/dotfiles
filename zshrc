@@ -8,9 +8,6 @@ autoload -Uz compinit
 compinit
 
 alias ls='ls -G'
-
-alias l='ls'
-alias la='ls -a'
 alias ll='ls -lh'
 alias lla='ll -a'
 
@@ -20,11 +17,11 @@ alias spec=rspec
 
 # Git aliases
 alias g='git'
-alias st='git st'
-alias gl='git l'
-alias gla='git l --all'
-alias ga='git add'
-alias gaa='git add --all'
+alias st='g st'
+alias l='g l'
+alias la='g la'
+alias lr='g lr'
+alias lar='g lar'
 
 alias mvim='mvim'
 alias vim='mvim -v'
