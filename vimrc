@@ -83,7 +83,7 @@ endif
 
 " Use a light background – use a real editor at some point
 set t_Co=256
-set background=light
+set background=dark
 colorscheme solarized
 
 " Highlight unwanted whitespaces
