@@ -13,6 +13,7 @@ alias lla='ll -a'
 
 alias r='script/rails'
 alias sc='script/console'
+alias fs='foreman start'
 
 # Git aliases
 alias g='git'
