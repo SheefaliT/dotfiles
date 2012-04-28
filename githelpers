@@ -1,0 +1,21 @@
+# Thanks again, Gary Bernhardt
+
+function git_pretty_log {
+    hash="%C(yellow)%h%C(reset)"
+    who="%C(white)%an%C(reset)"
+    when="%C(white)%ar%C(reset)"
+    refs="%C(blue)%d%C(reset)"
+    what="%s%C(reset)"
+
+    format="$hash $refs $what $who $when"
+
+    git log --graph --color --abbrev-commit --date=relative --pretty="tformat:${format}" $* |
+
+        # change "minutes ago" to "minutes"
+        sed -Ee 's/(seconds?|minutes?|hours?|days?|weeks?|months?|years?) ago/\1/' |
+
+        # change "1 year, 2 months" to "1 year"
+        sed -Ee 's/(years?), [[:digit:]]+ .*months?/\1/' |
+
+        less -FXRS
+}

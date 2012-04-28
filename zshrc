@@ -21,6 +21,7 @@ alias spec=rspec
 # Git aliases
 alias st='git st'
 alias gl='git l'
+alias gla='git l --all'
 alias ga='git add'
 alias gaa='git add --all'
 

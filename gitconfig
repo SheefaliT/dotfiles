@@ -19,10 +19,9 @@
   ru = remote update
   co = checkout
   st = status --short
-  l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  l = "!source ~/.githelpers && git_pretty_log"
   dc = diff --cached
-  # Just trying these out for now...
-  lol = log --pretty=oneline --abbrev-commit --graph --decorate
+  d = diff
   amend = commit --amend
   aa = add --all
 [push]
