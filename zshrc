@@ -38,6 +38,8 @@ export PATH=$HOME/bin:$HOME/.dotfiles/bin:/usr/local/bin:/usr/bin:/bin:/usr/loca
 # Apple developer toolkit
 export PATH=/Developer/usr/bin:$PATH
 
+export WORDCHARS='*?[]~&;!$%^<>'
+
 
 PROMPT=$'%{\e[1;30m%}%c ☛ %{\e[0m%}'
 RPROMPT=$'$(git_cwd_info)'
