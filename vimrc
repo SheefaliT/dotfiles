@@ -130,6 +130,9 @@ augroup cursorline
   au InsertLeave * set cursorline
 augroup END
 
+autocmd BufNewFile,BufRead *.zsh setlocal filetype=zsh
+autocmd FileType zsh setlocal shiftwidth=4 tabstop=4 softtabstop=4
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " Indent if we're at the beginning of a line. Else, do completion.
