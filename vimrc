@@ -171,7 +171,7 @@ let g:CommandTMinHeight=5
 let g:CommandTMaxHeight=15
 
 " Configure taglist
-let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+let Tlist_Ctags_Cmd="/usr/local/bin/ctags --exclude='*.js'"
 let Tlist_Use_Right_Window=1
 let Tlist_WinHeight=40
 let Tlist_Use_Horiz_Window=1
