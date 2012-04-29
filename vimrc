@@ -95,7 +95,7 @@ set cursorline
 
 set scrolloff=3
 
-set wildmode=longest
+set wildmode=longest,full
 set wildmenu
 
 set statusline=%f%(\ [%M%R%H%W]%)%=line\ %l,%<\ col\ %v
