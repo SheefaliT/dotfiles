@@ -27,6 +27,9 @@ alias mvim='mvim'
 alias vim='mvim -v'
 alias vi=vim
 
+# Load all the configs!
+for config_file ($HOME/.zsh/*.zsh) source $config_file
+
 export EMAIL='jasonmichaelroth@gmail.com'
 
 export TERM='xterm-color'
