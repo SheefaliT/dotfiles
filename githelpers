@@ -19,3 +19,17 @@ function git_pretty_log {
 
         less -FXRS
 }
+
+
+# Modified from Gary Bernhardt's git_churn script
+# https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn
+#
+function git_churn {
+    set -e
+    git log --all -M -C --name-only --format='format:' "$@" |
+        sort |
+        grep -v '^$' |
+        uniq -c |
+        sort -rg |
+        awk 'BEGIN {print "COUNT\tFILE"} {printf "%5s\t%s\n", $1, $2}'
+}
