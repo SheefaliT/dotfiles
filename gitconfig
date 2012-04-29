@@ -18,7 +18,7 @@
   b = branch
   ru = remote update
   co = checkout
-  st = status --short
+  st = status --short --ignore-submodules
   l = "!source ~/.githelpers && git_pretty_log"
   la = "!source ~/.githelpers && git_pretty_log --all"
   lr = "!source ~/.githelpers && git_pretty_log -20"
