@@ -44,7 +44,7 @@ export WORDCHARS='*?[]~&;!$%^<>'
 
 
 PROMPT=$'%{\e[1;30m%}%c ☛ %{\e[0m%}'
-RPROMPT=$'$(git_cwd_info)'
+RPROMPT=$'$(print_git_prompt)'
 
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
