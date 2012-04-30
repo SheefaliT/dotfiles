@@ -28,6 +28,8 @@ alias vim='mvim -v'
 alias vi=vim
 
 export EMAIL='jasonmichaelroth@gmail.com'
+export GIT_AUTHOR_NAME='Jason Roth'
+export GIT_AUTHOR_EMAIL=$EMAIL
 
 export TERM='xterm-color'
 
