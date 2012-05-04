@@ -130,8 +130,19 @@ augroup cursorline
   au InsertLeave * set cursorline
 augroup END
 
-autocmd BufNewFile,BufRead *.zsh setlocal filetype=zsh
-autocmd FileType zsh setlocal shiftwidth=4 tabstop=4 softtabstop=4
+augroup filetypes
+  au!
+
+  au BufNewFile,BufRead *.zsh setlocal filetype=zsh
+  au FileType zsh setlocal shiftwidth=4 tabstop=4 softtabstop=4
+
+  " Don't syntax highlight markdown because it's often wrong
+  au! FileType mkd setlocal syn=off
+
+  au BufRead *.md  set ai formatoptions=tcroqn2 comments=n:&gt;
+  au BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
+  au BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
+augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
