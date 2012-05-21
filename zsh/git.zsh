@@ -46,6 +46,9 @@ git_tangent() {
     elif [[ $(git_is_merging) -eq 1 ]] ; then
         print 'merging'
 
+    elif [[ $(git_is_cherry_picking) -eq 1 ]]; then
+        print 'cherry-picking'
+
     fi
 }
 
@@ -77,6 +80,12 @@ git_is_bisecting() {
 
 git_is_merging() {
     if [[ -f "$(git_repo_path)/MERGE_HEAD" ]] ; then
+        print 1
+    fi
+}
+
+git_is_cherry_picking() {
+    if [[ -f "$(git_repo_path)/CHERRY_PICK_HEAD" ]] ; then
         print 1
     fi
 }
