@@ -33,3 +33,9 @@ function git_churn {
         sort -rg |
         awk 'BEGIN {print "COUNT\tFILE"} {printf "%5s\t%s\n", $1, $2}'
 }
+
+# Pop the last commit and reset the stage
+# This will obliterate whatever you have going on, so be careful
+git_pop_last_commit() {
+  git reset --hard HEAD~1 && git cherry-pick HEAD@{1} -n && git reset .
+}

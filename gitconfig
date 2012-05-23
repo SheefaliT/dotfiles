@@ -23,6 +23,7 @@
   la = "!source ~/.githelpers && git_pretty_log --all"
   lr = "!source ~/.githelpers && git_pretty_log -20"
   lar = "!source ~/.githelpers && git_pretty_log -20 --all"
+  pop = "!source ~/.githelpers && git_pop_last_commit"
   dc = diff --cached
   d = diff
   amend = commit --amend
