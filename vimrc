@@ -143,6 +143,9 @@ augroup filetypes
   au BufRead *.md  set ai formatoptions=tcroqn2 comments=n:&gt;
   au BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
   au BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
+
+  " CoffeeScript should be indented by 4
+  au BufRead *.coffee setlocal ts=4 sw=4 sts=4
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
