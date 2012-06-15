@@ -67,6 +67,7 @@ set listchars=tab:▸\ ,eol:¬
 set colorcolumn=81
 
 set winwidth=86
+set winminwidth=15
 " GBH: We have to have a winheight bigger than we want to set winminheight.
 " But if we set winheight to be huge before winminheight, the winminheight set
 " will fail.
