@@ -84,8 +84,9 @@ endif
 
 " Use a light background – use a real editor at some point
 set t_Co=256
-set background=dark
+set background=light
 colorscheme solarized
+
 
 " Highlight unwanted whitespaces
 highlight TrailingWhitespace ctermbg=red guibg=red
@@ -147,6 +148,7 @@ augroup filetypes
   " CoffeeScript should be indented by 4
   au BufRead *.coffee setlocal ts=4 sw=4 sts=4
 augroup END
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
