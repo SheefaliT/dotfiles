@@ -34,6 +34,11 @@ function git_churn {
         awk 'BEGIN {print "COUNT\tFILE"} {printf "%5s\t%s\n", $1, $2}'
 }
 
+git_spike() {
+  git add --all && git commit -m 'spike!'
+}
+
+
 # Pop the last commit and reset the stage
 # This will obliterate whatever you have going on, so be careful
 git_pop_last_commit() {
