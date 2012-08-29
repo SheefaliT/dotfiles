@@ -31,6 +31,7 @@
   aa = add --all
   ai = add -i
   churn = "!source ~/.githelpers && git_churn"
+  cp = cherry-pick -n
 [push]
   # Only push branches that have been set up to track a remote branch.
   default = current
