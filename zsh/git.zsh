@@ -69,6 +69,9 @@ git_is_rebasing() {
         if [[ -f $rebasing_file ]] ; then
             print 1 && return
         fi
+        if [[ -d $rebasing_file ]] ; then
+            print 1 && return
+        fi
     done
 }
 
