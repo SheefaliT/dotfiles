@@ -11,3 +11,5 @@ setup_load_paths.rb
 db/*.sqlite3
 log/*.log
 tmp/
+.idea
+.idea_modules
