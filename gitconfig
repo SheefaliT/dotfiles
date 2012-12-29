@@ -17,12 +17,14 @@
   b = branch
   ru = remote update
   co = checkout
+  cob = checkout -b
   st = status --short --ignore-submodules
   l = "!source ~/.githelpers && git_pretty_log"
   la = "!source ~/.githelpers && git_pretty_log --all"
   lr = "!source ~/.githelpers && git_pretty_log -20"
   lar = "!source ~/.githelpers && git_pretty_log -20 --all"
   spike = "!source ~/.githelpers && git_spike"
+  wip = "!source ~/.githelpers && git_wip"
   pop = "!source ~/.githelpers && git_pop_last_commit"
   dc = diff --cached
   d = diff

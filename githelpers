@@ -35,12 +35,16 @@ function git_churn {
 }
 
 git_spike() {
-  git add --all && git commit -m 'spike!'
+    git add --all && git commit -m 'spike!'
+}
+
+git_wip() {
+    git add --all && git commit -m "wip..."
 }
 
 
 # Pop the last commit and reset the stage
 # This will obliterate whatever you have going on, so be careful
 git_pop_last_commit() {
-  git reset --hard HEAD~1 && git cherry-pick HEAD@{1} -n && git reset .
+    git reset --hard HEAD~1 && git cherry-pick HEAD@{1} -n && git reset .
 }
