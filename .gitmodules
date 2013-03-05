@@ -34,3 +34,6 @@
 [submodule "vim/bundle/monokai"]
 	path = vim/bundle/monokai
 	url = git://github.com/sickill/vim-monokai.git
+[submodule "vim/bundle/gitgutter"]
+	path = vim/bundle/gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
