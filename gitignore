@@ -1,6 +1,7 @@
 .DS_Store
 *.x
 sqlnet.log
+.rvmrc-jason
 
 # rvm configuration stuff
 # if the following are supposed to go into source control
