@@ -83,8 +83,8 @@ if has("gui_running")
 endif
 
 set t_Co=256
-set background=dark
-colorscheme monokai
+set background=light
+colorscheme solarized
 
 " Highlight unwanted whitespaces
 highlight TrailingWhitespace ctermbg=red guibg=red
