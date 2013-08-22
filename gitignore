@@ -7,6 +7,8 @@ sqlnet.log
 # if the following are supposed to go into source control
 # then add them explicitly using the -f option
 .rvmrc
+.ruby-version
+.ruby-gemset
 setup_load_paths.rb
 .bundle
 db/*.sqlite3
@@ -14,3 +16,5 @@ log/*.log
 tmp/
 .idea
 .idea_modules
+*.iml
+Procfile.jason
