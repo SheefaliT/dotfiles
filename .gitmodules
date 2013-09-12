@@ -34,3 +34,6 @@
 [submodule "vim/bundle/monokai"]
 	path = vim/bundle/monokai
 	url = git://github.com/sickill/vim-monokai.git
+[submodule "vim/bundle/fireplace"]
+	path = vim/bundle/fireplace
+	url = https://github.com/tpope/vim-fireplace.git
