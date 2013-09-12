@@ -227,3 +227,6 @@ command! StripTrailingWhitespace :call StripTrailingWhitespace()
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
+
+" clojure!
+autocmd FileType clojure setlocal lispwords+=testing
