@@ -4,7 +4,7 @@ alias lla='ll -a'
 
 alias r='script/rails'
 alias sc='script/console'
-alias fs='foreman start'
+alias fs='bundle exec foreman start'
 
 # Git aliases
 alias g='git'
