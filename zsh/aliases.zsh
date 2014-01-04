@@ -13,7 +13,3 @@ alias l='g l'
 alias la='g la'
 alias lr='g lr'
 alias lar='g lar'
-
-alias mvim='mvim'
-alias vim='mvim -v'
-alias vi=vim
