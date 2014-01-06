@@ -48,3 +48,9 @@ setopt    sharehistory
 
 # Load all the configs!
 for config_file ($HOME/.zsh/*.zsh) source $config_file
+
+ssh() {
+    echo -e "\033]50;SetProfile=Danger\a"
+    /usr/bin/ssh "$@"
+    echo -e "\033]50;SetProfile=Default\a"
+}
