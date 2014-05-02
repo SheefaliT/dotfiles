@@ -7,29 +7,9 @@ autoload -U colors && colors
 autoload -Uz compinit
 compinit
 
-alias ls='ls -G'
-alias ll='ls -lh'
-alias lla='ll -a'
-
-alias r='script/rails'
-alias sc='script/console'
-alias fs='foreman start'
-
-# Git aliases
-alias g='git'
-alias st='g st'
-alias l='g l'
-alias la='g la'
-alias lr='g lr'
-alias lar='g lar'
-
 export TERM='xterm-color'
-
-# just reset the fucking path so I know what's on it
-export PATH=$HOME/bin:$HOME/.dotfiles/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/Developer/usr/bin
-
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
 export WORDCHARS='*?[]~&;!$%^<>'
-
 
 PROMPT=$'%{\e[1;30m%}%c ☛ %{\e[0m%}'
 RPROMPT=$'$(print_git_prompt)'
@@ -47,4 +27,5 @@ setopt    incappendhistory
 setopt    sharehistory
 
 # Load all the configs!
+for config_file ($HOME/.sh/*.sh) source $config_file
 for config_file ($HOME/.zsh/*.zsh) source $config_file
