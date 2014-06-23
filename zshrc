@@ -34,3 +34,6 @@ ssh() {
     /usr/bin/ssh "$@"
     echo -e "\033]50;SetProfile=Default\a"
 }
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
