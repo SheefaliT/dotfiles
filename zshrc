@@ -26,7 +26,7 @@ alias lar='g lar'
 export TERM='xterm-color'
 
 # just reset the fucking path so I know what's on it
-export PATH=$HOME/bin:$HOME/.dotfiles/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/Developer/usr/bin
+export PATH=$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/Developer/usr/bin
 
 export WORDCHARS='*?[]~&;!$%^<>'
 
