@@ -11,7 +11,6 @@ export TERM='xterm-color'
 
 # just reset the fucking path so I know what's on it
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
-export PATH=/usr/local/opt/ruby/bin:$PATH
 
 export WORDCHARS='*?[]~&;!$%^<>'
 
