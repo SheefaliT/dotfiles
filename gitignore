@@ -18,3 +18,4 @@ tmp/
 .idea_modules
 *.iml
 Procfile.jason
+.editorconfig
