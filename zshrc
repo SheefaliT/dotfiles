@@ -14,8 +14,8 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X1
 
 export WORDCHARS='*?[]~&;!$%^<>'
 
-PROMPT=$'%{\e[1;30m%}%c ☛ %{\e[0m%}'
-RPROMPT=$'$(print_git_prompt)'
+PROMPT=$'$(print_git_prompt)%{\e[1;30m%}%c ☛ %{\e[0m%}'
+# RPROMPT=$'$(print_git_prompt)'
 
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
