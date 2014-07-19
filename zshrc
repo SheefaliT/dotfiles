@@ -31,5 +31,4 @@ setopt    incappendhistory
 setopt    sharehistory
 
 # Load all the configs!
-for config_file ($HOME/.sh/*.sh) source $config_file
 for config_file ($HOME/.zsh/*.zsh) source $config_file
