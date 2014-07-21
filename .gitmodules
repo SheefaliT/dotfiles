@@ -40,3 +40,6 @@
 [submodule "vim/bundle/classpath"]
 	path = vim/bundle/classpath
 	url = https://github.com/tpope/vim-classpath
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
