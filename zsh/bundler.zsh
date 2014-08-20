@@ -1,6 +1,6 @@
 # The following is based on https://github.com/gma/bundler-exec
 
-bundled_commands=(cap cucumber rackup rake rspec shotgun)
+bundled_commands=(cap cucumber rackup rake rspec shotgun middleman)
 
 # Remove $UNBUNDLED_COMMANDS from the bundled_commands list
 for cmd in $UNBUNDLED_COMMANDS; do
